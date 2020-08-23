@@ -1,36 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-/*
-example for understanding : -
-for element '2'  find the number of elements greater than '2' in right hand and left hand side
-    find the index of next smaller element than '2', the next smaller element form '2' is 1 which is at index 8
-    so numbers which are greater than '2' on its right are = (8 - 4)-1=3; where  '4' is the index of '2'.
-    if we don't get the next smaller element than all the elements on right are bigger than '2' so total will be = (n-4)-1; , where n is size of array
-
-    similarly find the prev smaller element than '2'
-    here prev smaller element is 1 which is at index '1' so total number of elements bigger than '2' on left = (4-1)-1 =2;
-     if we don't get the prev smaller element than all the elements on left are  bigger than '2' so total becomes the current index of '2' i.e 4 elements.
-
-arr= 3,1,4,5,2,6,4,3,1
-452
-4526
-45264
-452643
-52
-526
-5264
-52643
-2
-26
-264
-2643
-total =12 subarrays in which '2' will be minimum
-number of elements greater than'2' in right =3 i.e(6,4,3)
-number of elements greater than'2' in left =2 i.e(4,5)
-so total possible subarrays in which '2' will be min is (2+1)* (3+1) = 12
-so the contribution in sum for element '2' will be 2* (2+1) * (3+1);
-*/
-
 #define mod 1000000007
 
 int sum_of_subarrays_minimum(vector<int> arr)
@@ -94,3 +63,33 @@ int32_t main()
     return 0;
 }
 
+/*
+example for understanding : -
+for element '2'  find the number of elements greater than '2' in right hand and left hand side
+    find the index of next smaller element than '2', the next smaller element form '2' is 1 which is at index 8
+    so numbers which are greater than '2' on its right are = (8 - 4)-1=3; where  '4' is the index of '2'.
+    if we don't get the next smaller element than all the elements on right are bigger than '2' so total will be = (n-4)-1; , where n is size of array
+
+    similarly find the prev smaller element than '2'
+    here prev smaller element is 1 which is at index '1' so total number of elements bigger than '2' on left = (4-1)-1 =2;
+     if we don't get the prev smaller element than all the elements on left are  bigger than '2' so total becomes the current index of '2' i.e 4 elements.
+
+arr= 3,1,4,5,2,6,4,3,1
+452
+4526
+45264
+452643
+52
+526
+5264
+52643
+2
+26
+264
+2643
+total =12 subarrays in which '2' will be minimum
+number of elements greater than'2' in right =3 i.e(6,4,3)
+number of elements greater than'2' in left =2 i.e(4,5)
+so total possible subarrays in which '2' will be min is (2+1)* (3+1) = 12
+so the contribution in sum for element '2' will be 2* (2+1) * (3+1);
+*/
